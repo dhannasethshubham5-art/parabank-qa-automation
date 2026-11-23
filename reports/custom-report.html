@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Automation Dashboard</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #171923, #30364b, #171923);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  margin-bottom: 35px;
+}
+
+h1 {
+  color: #F48031;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #cbd5e1;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.card {
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  color: #cbd5e1;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.accent {
+  color: #F48031;
+}
+
+.passed {
+  color: #22c55e;
+}
+
+.failed {
+  color: #ef4444;
+}
+
+.skipped {
+  color: #facc15;
+}
+
+.report {
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(14px);
+  overflow-x: auto;
+}
+
+h2 {
+  color: #F48031;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+th {
+  color: #F48031;
+}
+
+footer {
+  margin-top: 30px;
+  color: #cbd5e1;
+  text-align: center;
+  font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <h1>QA Automation Dashboard</h1>
+  <p class="subtitle">ParaBank | Playwright + TypeScript Test Execution Report</p>
+</header>
+
+<section class="cards">
+  <div class="card">
+    <h3>Total Tests</h3>
+    <p class="accent">7</p>
+  </div>
+
+  <div class="card">
+    <h3>Passed Tests</h3>
+    <p class="passed">5</p>
+  </div>
+
+  <div class="card">
+    <h3>Failed Tests</h3>
+    <p class="failed">1</p>
+  </div>
+
+  <div class="card">
+    <h3>Skipped Tests</h3>
+    <p class="skipped">0</p>
+  </div>
+</section>
+
+<section class="report">
+  <h2>Execution Details</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Test Scenario</th>
+        <th>Status</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      
+      <tr>
+        <td>Parse USD transaction amount</td>
+        <td class="passed">PASSED</td>
+        <td>0.01 sec</td>
+      </tr>
+    
+      <tr>
+        <td>Format USD currency correctly</td>
+        <td class="passed">PASSED</td>
+        <td>0.01 sec</td>
+      </tr>
+    
+      <tr>
+        <td>Validate transaction balance</td>
+        <td class="passed">PASSED</td>
+        <td>0.00 sec</td>
+      </tr>
+    
+      <tr>
+        <td>Reject invalid currency format</td>
+        <td class="passed">PASSED</td>
+        <td>0.01 sec</td>
+      </tr>
+    
+      <tr>
+        <td>Scenario A - Registration and Checking Account</td>
+        <td class="timedOut">TIMEDOUT</td>
+        <td>30.03 sec</td>
+      </tr>
+    
+      <tr>
+        <td>Scenario C - Headless API User Creation, Deposit and Transaction History</td>
+        <td class="failed">FAILED</td>
+        <td>0.94 sec</td>
+      </tr>
+    
+      <tr>
+        <td>Verify ParaBank homepage</td>
+        <td class="passed">PASSED</td>
+        <td>3.36 sec</td>
+      </tr>
+    
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  ParaBank QA Automation | Generated using Playwright Custom Reporter
+  <br>
+  Overall result: FAILED
+</footer>
+
+</div>
+</body>
+</html>
